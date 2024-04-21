@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* Colors */
+:root {
+  --lightest: #EE4540;
+  --lighter: #C72C41;
+  --light: #801336;
+  --dark: #510A32;
+  --darker: #2D142C;
+  --darkest: #1A1A1A;
+}
