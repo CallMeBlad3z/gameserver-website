@@ -3,7 +3,7 @@ import discordLogo from "/public/discord.png";
 import Link from "next/link";
 export default function Header() {
   return (
-    <div className="w-full absolute">
+    <div className="w-full absolute z-50">
         <nav className="container relative flex flex-wrap items-center justify-between mx-auto p-8 bg-red-lighter shadow-2xl rounded-b">
             <Link href="/" className="font-bond text-3xl">
                 Pelitupa.fi

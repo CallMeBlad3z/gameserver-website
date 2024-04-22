@@ -29,17 +29,9 @@ export default function Hero(props: HeroProps) {
     }, [opacity1]);
 
 return (
-    <div className="relative h-screen">
-        <div className="absolute -z-10 inset-0">
-            <div 
-                style={{ 
-                    transition: 'opacity 1s ease-in-out', 
-                    opacity: opacity1,
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                }}
-            >
+    <div className="flex items-center justify-center relative h-dvh w-dvh">
+        <div className="absolute -z-30 inset-0">
+            <div className="absolute h-full w-full">
                 <Image 
                     src={props.imgData1}
                     alt={props.imgAlt}
@@ -47,15 +39,7 @@ return (
                     objectFit="cover"
                 />
             </div>
-            <div 
-                style={{ 
-                    transition: 'opacity 1s ease-in-out', 
-                    opacity: opacity2,
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                }}
-            >
+            <div className={`absolute h-full w-full ease-in transition-opacity duration-1000 ${opacity2 === 1 ? 'opacity-100' : 'opacity-0'}`}>
                 <Image 
                     src={props.imgData2}
                     alt={props.imgAlt}
@@ -63,7 +47,7 @@ return (
                     objectFit="cover"
                 />
             </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-700"></div>
             </div>
             <div className="pt-48 flex justify-center items-center">
                 <h1 className="text-white text-6xl">{props.title}</h1>
