@@ -12,7 +12,7 @@ const config: Config = {
         'black-opacity-80': 'rgba(0, 0, 0, 0.8)',
         'red-lightest': '#F9E8E8',
         'red-lighter': '#EE4540',
-        'red': '#C72C41',
+        'red': '#e3324a',
         'red-dark': '#801336',
         'red-darker': '#510A32',
         'red-darkest': '#2D142C',
@@ -21,6 +21,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      height: {
+        '128': '32rem',
+        '144': '36rem', 
+        '160': '40rem', 
+        '192': '48rem', 
       },
     },
     screens: {
