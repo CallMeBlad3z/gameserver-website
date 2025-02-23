@@ -10,12 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         'black-opacity-80': 'rgba(0, 0, 0, 0.8)',
-        'red-lightest': '#F9E8E8',
-        'red-lighter': '#EE4540',
+        'very-green': '#008000',
+        'very-red': '#ff0000',
         'red': '#e3324a',
-        'red-dark': '#801336',
-        'red-darker': '#510A32',
-        'red-darkest': '#2D142C',
+        'dark': '#2C2F33',
+        'darker': '#23272A',
+        'red-dc': '#CA0606',
+        'green-dc': '#2ecc71',
+        'blue-dc': '#3498db',
+        'light-blue-dc': '#5bc0de',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -25,7 +28,8 @@ const config: Config = {
       height: {
         '128': '32rem',
         '144': '36rem', 
-        '160': '40rem', 
+        '160': '40rem',
+        '176': '44rem', 
         '192': '48rem', 
       },
     },
