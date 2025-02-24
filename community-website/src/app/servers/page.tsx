@@ -1,10 +1,10 @@
 import ServerList from '@/components/server-list';
+import { fetchServerInfo } from '@/utils/fetchServerInfo';
 
 export default async function ServerPage() {
   let serversInfo = [];
   try {
-    const response = await fetch('http://localhost:3000/api/servers');
-    serversInfo = await response.json();
+    serversInfo = await fetchServerInfo();
   } catch (error) {
     console.error('Error fetching server info:', error);
   }
