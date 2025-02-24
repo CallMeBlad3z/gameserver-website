@@ -10,7 +10,7 @@ export default function ServerList({ serversInfo = [] }) {
         {serversInfo.length > 0 ? (
           serversInfo.map((serverInfo, index) => (
             <div
-              className="relative flex flex-col rounded p-2 bg-darker drop-shadow-xl overflow-hidden group"
+              className="relative flex flex-col rounded p-2 bg-darker drop-shadow-xl overflow-hidden group mb-10"
               key={index}
             >
               <Image
@@ -24,7 +24,7 @@ export default function ServerList({ serversInfo = [] }) {
                 <div className="server-info py-2 pl-4">
                   <h2 className="text-2xl pb-2">{serverInfo.name}</h2>
                   <p className="text-1xl">Kartta: {serverInfo.map}</p>
-                  <p className="text-1xl">Pelaajat: {serverInfo.players}/24</p>
+                  <p className="text-1xl">Pelaajat: {serverInfo.players}/{serverInfo.maxplayers}</p>
                 </div>
                 <div className="flex flex-col gap-6">
                   <Image src={tf2logo} alt="tf2logo" width={50} height={50} />
@@ -36,7 +36,7 @@ export default function ServerList({ serversInfo = [] }) {
               <div
                 className="absolute inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               >
-              <Link className="bg-red p-1 px-4 rounded-md" href={`steam://connect/${serverInfo.ip}:${serverInfo.port}`}>
+              <Link className="bg-red p-1 px-6 rounded-md" href={`steam://connect/${serverInfo.ip}:${serverInfo.port}`}>
                 Liity
               </Link>
               </div>
