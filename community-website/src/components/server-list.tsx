@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import cardbg from '/public/pl-enclosure.jpg';
 import tf2logo from '/public/tf2logo.png';
 
 export default function ServerList({ serversInfo = [] }) {
@@ -14,11 +13,11 @@ export default function ServerList({ serversInfo = [] }) {
               key={index}
             >
               <Image
-                src={cardbg}
+                src={serverInfo.backgroundImage}
                 alt="serverCard_bg"
                 layout="fill"
                 objectFit="cover"
-                className="brightness-75 rounded-lg transition-all duration-300 group-hover:brightness-50"
+                className="brightness-50 rounded-lg transition-all duration-300 group-hover:brightness-50"
               />
               <div className="flex justify-between relative">
                 <div className="server-info py-2 pl-4">
