@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import tf2logo from '/public/tf2logo.png';
+import Ping from './ping';
 
 export default function ServerList({ serversInfo = [] }) {
   return (
@@ -26,10 +27,13 @@ export default function ServerList({ serversInfo = [] }) {
                   <p className="text-1xl">Pelaajat: {serverInfo.players}/{serverInfo.maxplayers}</p>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <Image src={tf2logo} alt="tf2logo" width={50} height={50} />
-                  <p className={serverInfo.online ? 'text-very-green' : 'text-very-red'}>
-                    {serverInfo.online ? 'Online' : 'Offline'}
-                  </p>
+                  <Image className="self-end" src={tf2logo} alt="tf2logo" width={50} height={50} />
+                  <div className="flex flex-row">
+                    <Ping ip={serverInfo.ip} port={serverInfo.port} />
+                    <p className={serverInfo.online ? 'text-green-500' : 'text-red-500'}>
+                      {serverInfo.online ? 'Online' : 'Offline'}
+                    </p>
+                  </div>
                 </div>
               </div>
               <div
