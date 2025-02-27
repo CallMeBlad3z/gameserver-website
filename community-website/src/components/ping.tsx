@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { GeistMono } from 'geist/font/mono';
 
 interface PingProps {
   ip: string;
@@ -27,14 +28,14 @@ export default function Ping({ ip, port }: PingProps) {
 
   const getPingColor = (ping: number | null) => {
     if (ping === null) return 'text-gray-500';
-    if (ping < 59) return 'text-green-500';
+    if (ping < 60) return 'text-green-500';
     if (ping < 100) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   return (
     <p className="text-1xl mr-8 text-left">
-      Ping: <span className={getPingColor(ping)}>{ping !== null ? ping : '...'}</span>
+      Ping: <span className={`${getPingColor(ping)} ${GeistMono.className}`}>{ping !== null ? ping : '...'}</span>
     </p>
   );
 }
