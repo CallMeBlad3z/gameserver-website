@@ -8,10 +8,12 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showMenuItems, setShowMenuItems] = useState(false);
 
+  // This function toggles the menu open and closed
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // This effect runs when the isOpen state changes
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => {
@@ -24,7 +26,7 @@ export default function Header() {
 
   return (
     <div className="flex bg-darkest">
-      <nav className="flex lg:mt-16 flex-wrap w-full 2xl:w-3/5 lg:w-3/4 text-white items-center justify-between mx-auto p-8 bg-dark lg:rounded-3xl">
+      <nav className="flex mt-16 flex-wrap w-full 2xl:w-3/5 xl:w-8/12 md:w-10/12 text-white items-center justify-between mx-auto p-8 bg-dark rounded-3xl">
         <Link href="/" className="text-4xl font-sans bg-gradient-to-r from-red-custom via-purple-500 to-blue-custom bg-clip-text text-transparent">
           PeliTupa
         </Link>
