@@ -1,7 +1,7 @@
-import cs2Img from '/public/cs2bg.png';
-import tf2Img from '/public/tf2bgbig.png';
+import cs2Img from '/public/cs2bg_big.jpeg';
+import tf2Img from '/public/tf2bg_big.png';
 import Hero from '@/components/hero';
-import InfoSection from '@/components/infosection';
+import InfoSection from '@/components/info-section';
 
 export default function Home() {
   return (
@@ -9,10 +9,12 @@ export default function Home() {
       <Hero 
         imgData1={cs2Img}
         imgData2={tf2Img}
-        imgAlt="CS2 Background Image"
-        title="Test Title" 
+        imgAlt="Background Image"
+        title="PeliTupa" 
       />
-      <InfoSection />
+      <div className="xl:hidden">
+        <InfoSection />
+      </div>
     </div>
   );
 }
