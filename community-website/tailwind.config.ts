@@ -8,13 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)'],
+      },
       colors: {
         'black-opacity-80': 'rgba(0, 0, 0, 0.8)',
-        'very-green': '#008000',
-        'very-red': '#ff0000',
-        'red': '#e3324a',
+        'red-custom': '#FF304B',
+        'blue-custom': '#7176FF',
         'dark': '#2C2F33',
         'darker': '#23272A',
+        'darkest': '#121212',
         'red-dc': '#CA0606',
         'green-dc': '#2ecc71',
         'blue-dc': '#3498db',
@@ -39,7 +43,7 @@ const config: Config = {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
-      '2xl': '1536px',
+      '2xl': '1920px',
     },
   },
   plugins: [],
